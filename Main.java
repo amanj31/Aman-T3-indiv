@@ -6,7 +6,7 @@ Level: Easy
 
 /* 
 Imports allow you to use code already written by others.  
-Java has many standard libraries. The names around the dots in import often give you a hint to the originator of the code.
+Java has manytest standard libraries. The names around the dots in import often give you a hint to the originator of the code.
  */
 import java.util.Scanner; //java library for user input
 
