@@ -4,6 +4,6 @@ public class ZeroTest extends Skeleton {
     }
 
     public void run() {
-        System.out.println("u chose 0");
+        System.out.println("u chose 1");
     }
 }

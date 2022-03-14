@@ -23,7 +23,9 @@ public class Main {   //Everything in Java is inside a class, Squigs, Squigalies
     */
     static public void main(String[] args)  {  // open squig begins the method
         HashMap<Integer, Skeleton> choices = new HashMap<Integer, Skeleton>();
-        choices.put(0, new ZeroTest("Choice 0"));
+        choices.put(0, new Exit("Choice 0"));
+        choices.put(1, new ZeroTest("Choice 1"));
+        choices.put(2, new HelloWorld("Choice 2"));
          // 'coder' defined method/function call to a different code block
 
         while (true) {
