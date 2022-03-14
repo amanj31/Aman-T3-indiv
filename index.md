@@ -1,5 +1,7 @@
 # Aman-T3-indiv
 
+## Main Github Branch: [here](https://github.com/amanj31/Aman-T3-indiv/tree/main)
+
 ## Plan for AP Exam:
 * Review old FRQs
 * Rewatch Collegeboard videos
