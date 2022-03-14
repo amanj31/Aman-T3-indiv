@@ -2,7 +2,7 @@
 
 **Individual Grade: 2.75/3**
 
-(Review Ticket)[https://github.com/amanj31/Aman-T3-indiv/issues/1]
+Review ticket: https://github.com/amanj31/Aman-T3-indiv/issues/1
 
 Runtime: (found on Repl) [Here](https://replit.com/@AmanJain25/Aman-T3-indiv#Main.java)
 
