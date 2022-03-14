@@ -1,5 +1,9 @@
 # Week 0:
 
+**Individual Grade: 2.75/3**
+
+(Review Ticket)[https://github.com/amanj31/Aman-T3-indiv/issues/1]
+
 Runtime: (found on Repl) [Here](https://replit.com/@AmanJain25/Aman-T3-indiv#Main.java)
 
 Code: https://github.com/amanj31/Aman-T3-indiv/blob/2c1cd6b9136a23a9a5f98bc85e050a5a0026816e/Main.java#L1-L58
