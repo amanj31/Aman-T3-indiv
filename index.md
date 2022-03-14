@@ -6,3 +6,5 @@
 * Practice collegeboard MCs and FRQs
 * Put in effort on in-class assignments
 
+## Week 0: (Here)[https://amanj31.github.io/Aman-T3-indiv/week0]
+
