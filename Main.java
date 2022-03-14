@@ -26,10 +26,12 @@ public class Main {   //Everything in Java is inside a class, Squigs, Squigalies
         choices.put(0, new Exit("Choice 0"));
         choices.put(1, new ZeroTest("Choice 1"));
         choices.put(2, new HelloWorld("Choice 2"));
+        choices.put(3, new IntByReference("Choice 3 (Swapper)"));
+        choices.put(4, new Matrix("Choice 4 (Matrix)"));
          // 'coder' defined method/function call to a different code block
 
         while (true) {
-            menu("Here is the menu: ", choices);
+            menu("\n Here is the menu:a ", choices);
         }
     } // close squig ends the method.  What did this method do?
 
