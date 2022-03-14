@@ -5,6 +5,8 @@
 * Rewatch Collegeboard videos
 * Practice collegeboard MCs and FRQs
 * Put in effort on in-class assignments
+* Use some external study materials like textbooks and online resources
+* Collaborate with peers and ask questions
 
 ## Week 0: [Here](https://amanj31.github.io/Aman-T3-indiv/week0)
 
