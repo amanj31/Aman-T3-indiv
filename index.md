@@ -1,4 +1,4 @@
-# Aman-T3-indiv
+# Home
 
 ## Main Github Branch: [here](https://github.com/amanj31/Aman-T3-indiv/tree/main)
 
