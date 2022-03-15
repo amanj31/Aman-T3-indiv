@@ -1,6 +1,8 @@
 # Week 0:
 
-**Individual Grade: 2.75/3**
+**Individual Grade: 2/3**
+**Team Grade: 2/2**
+**OverallGrade: 4/5**
 
 [Review Ticket](https://github.com/amanj31/Aman-T3-indiv/issues/1)
 
