@@ -4,7 +4,7 @@
 
 **Team Grade:**
 
-**OverallGrade:**
+**Overall Grade:**
 
 [Review Ticket](https://github.com/amanj31/Aman-T3-indiv/)
 
