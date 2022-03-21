@@ -48,7 +48,26 @@ public class CreatingQueue extends Skeleton { //extends Skeleton because it must
         dequeue();
         dequeue();
         dequeue();
+        queue.clear();
+        enqueue("big");
+        enqueue("blue");
+        enqueue("bears");
+        enqueue("bite");
+        enqueue("bitter");
+        enqueue("berries");
+        System.out.println("Here is another demonstation of dequeueing. We will start with the following queue: ");
+        for (int i = 0; i < queue.size(); i++) {
+            System.out.print(queue.get(i) + " ");
+        }
+        dequeue();
+        dequeue();
+        dequeue();
+        dequeue();
+        dequeue();
+        dequeue();
+
     }
+    
 
 
 }
