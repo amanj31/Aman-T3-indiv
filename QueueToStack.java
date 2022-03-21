@@ -42,5 +42,7 @@ public class QueueToStack extends Skeleton {//extends Skeleton because it must u
             ss.add(0, qq.get(i));
         }
         System.out.println("Stack, in the reverse order of the queue: " + ss);
+        ss.clear();
+        s.clear();
     }
 }

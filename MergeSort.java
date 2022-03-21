@@ -62,6 +62,8 @@ public class MergeSort extends Skeleton {//extends Skeleton because it must use 
         }
         System.out.println("Sorted list: " + c);
         System.out.println();
+        System.out.println(1);
+
         System.out.println("The lists x and y will be sorted in alphabetical order.");
         System.out.println("x: " + x);
         System.out.println("y: " + y);
@@ -82,8 +84,8 @@ public class MergeSort extends Skeleton {//extends Skeleton because it must use 
                 }
             }
         }
-        System.out.println("Sorted list: " + z);
-
+        System.out.println(1);
+        System.out.print("Sorted list: ");
     }
     
 }
