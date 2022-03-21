@@ -1,10 +1,10 @@
 # Week 1:
 
-**Individual Grade:**
+**Individual Grade: /4**
 
-**Team Grade:**
+**Team Grade: 1/1**
 
-**Overall Grade:**
+**Overall Grade: /5**
 
 [Review Ticket](https://github.com/amanj31/Aman-T3-indiv/issues/2)
 
