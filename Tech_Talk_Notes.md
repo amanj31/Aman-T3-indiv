@@ -1,6 +1,6 @@
 # Tech Talk Notes
 
-### Week 0:
+### Week 0: 
 
 Notes on Tech Talk:
 * ![Screen Shot 2022-03-14 at 9 40 13 AM](https://user-images.githubusercontent.com/60991517/158219316-79efe188-61bf-4535-93b2-4ab3008ab76a.png)
