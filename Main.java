@@ -28,10 +28,14 @@ public class Main {   //Everything in Java is inside a class, Squigs, Squigalies
         choices.put(2, new HelloWorld("Choice 2"));
         choices.put(3, new IntByReference("Choice 3 (Swapper)"));
         choices.put(4, new Matrix("Choice 4 (Matrix)"));
+        choices.put(5, new CreatingQueue("Choice 5: Create a Queue"));
+        choices.put(6, new MergeSort("Choice 6: Sort two Linked Lists"));
+        choices.put(7, new QueueToStack("Choice 7: Queue to Stack"));
+        
          // 'coder' defined method/function call to a different code block
 
         while (true) {
-            menu("\n Here is the menu:a ", choices);
+            menu("\n Here is the menu: ", choices);
         }
     } // close squig ends the method.  What did this method do?
 
@@ -49,7 +53,13 @@ public class Main {   //Everything in Java is inside a class, Squigs, Squigalies
         try {
             Scanner currentScan = new Scanner(System.in);
             int order = currentScan.nextInt();
-            choices.get(order).run();
+            //currentScan.close();
+            int qq = 0;
+            do {
+                choices.get(order).run();
+                qq++;
+            } while (qq < 1);
+            
         } catch (Exception e) {
             System.out.println("Please choose a valid menu item");
         }
