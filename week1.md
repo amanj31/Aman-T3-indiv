@@ -77,7 +77,8 @@ public class CreatingQueue extends Skeleton {
 ```
 
 [Merge sort](https://github.com/amanj31/Aman-T3-indiv/blob/main/MergeSort.java):
-```import java.util.LinkedList;
+```
+import java.util.LinkedList;
 
 public class MergeSort extends Skeleton {
 
@@ -126,7 +127,8 @@ public class MergeSort extends Skeleton {
 ```
 
 [Queue to Stack](https://github.com/amanj31/Aman-T3-indiv/blob/main/QueueToStack.java):
-```import java.util.LinkedList;
+```
+import java.util.LinkedList;
 
 public class QueueToStack extends Skeleton {
 
