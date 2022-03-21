@@ -59,6 +59,8 @@ public class CreatingQueue extends Skeleton { //extends Skeleton because it must
         for (int i = 0; i < queue.size(); i++) {
             System.out.print(queue.get(i) + " ");
         }
+        System.out.println();
+        System.out.println();
         dequeue();
         dequeue();
         dequeue();
