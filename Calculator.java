@@ -3,12 +3,13 @@ import java.util.LinkedList;
 import java.util.HashMap;
 
 public class Calculator {
-private ArrayList<String> reverse_polish;
-  private String expression;
-  private ArrayList<String> tokens;
-  private Double result;
+    private ArrayList<String> reverse_polish;
+    private String expression;
+    private ArrayList<String> tokens;
+    private Double result;
 
-  public Calculator(String expression) {
+    public Calculator(String expression) {
+
         System.out.println("Welcome to calculator");
         // original input
         this.expression = expression;
@@ -27,7 +28,7 @@ private ArrayList<String> reverse_polish;
         this.rpnToResult();
     }
   
-  private final HashMap<String, Integer> OPERATORS = new HashMap<>();
+    private final HashMap<String, Integer> OPERATORS = new HashMap<>();
     {
         // Map<"token", precedence>
         OPERATORS.put("*", 3);
@@ -52,7 +53,7 @@ private ArrayList<String> reverse_polish;
     }
 
   
-  private final HashMap<String, Integer> SEPARATORS = new HashMap<>();
+    private final HashMap<String, Integer> SEPARATORS = new HashMap<>();
     {
         // Map<"separator", not_used>
         SEPARATORS.put(" ", 0);
@@ -79,7 +80,7 @@ private ArrayList<String> reverse_polish;
         return (OPERATORS.get(token1) - OPERATORS.get(token2) >= 0) ;
     }
   
-  private void tokensToReversePolishNotation () {
+    private void tokensToReversePolishNotation () {
         // contains final list of tokens in RPN
         this.reverse_polish = new ArrayList<String>();
 
@@ -98,6 +99,7 @@ private ArrayList<String> reverse_polish;
                     while (tokenStack.peek() != null && !tokenStack.peek().equals("("))
                     {
                         reverse_polish.add( (String)tokenStack.peek() );
+                        tokenStack.pop();
                     }
                     tokenStack.pop();
                     break;
@@ -117,6 +119,7 @@ private ArrayList<String> reverse_polish;
                       //System.out.println("entry while " + token + " peek " + (String) tokenStack.peek());
                         if ( isPrecedent(token, (String) tokenStack.peek() )) {
                             reverse_polish.add((String)tokenStack.peek());
+                            tokenStack.pop();
                             //System.out.println("c: " + this.reverse_polish.toString());
                             continue;
                         }
@@ -135,11 +138,12 @@ private ArrayList<String> reverse_polish;
         // Empty remaining tokens
         while (tokenStack.size() > 0 && tokenStack.peek() != null) {
             this.reverse_polish.add((String)tokenStack.peek());
+            tokenStack.pop();
         }
 
     } //tokensToReversePolishNotation
 
-   private void termTokenizer() {
+    private void termTokenizer() {
         // contains final list of tokens
         this.tokens = new ArrayList<>();
 
@@ -177,7 +181,7 @@ private ArrayList<String> reverse_polish;
         
         LinkedList<Double> ccccc= new LinkedList<>();
         Stack calculation = new Stack(ccccc);
-        Double a = new Double(0), b = new Double(0);
+        Double a = 0.0, b = 0.0;
 
         for (int i=0; i<reverse_polish.size(); i++)  {
             if (!OPERATORS.containsKey(reverse_polish.get(i))) {
@@ -186,11 +190,13 @@ private ArrayList<String> reverse_polish;
             else {
                 if (NUMOPERANDS.get(reverse_polish.get(i)) == 1) {
                     a = (Double)(calculation.peek());
+                    calculation.pop();
                 } else {
                     //assume 2 operands otherwise
                     a = (Double)(calculation.peek());
                     calculation.pop();
                     b = (Double)(calculation.peek());
+                    calculation.pop();
                 }
                 switch(reverse_polish.get(i)) { 
                     case "+":
@@ -221,14 +227,17 @@ private ArrayList<String> reverse_polish;
             } //for
 
             this.result = (Double)calculation.peek();
+            calculation.pop();
         }
   
     public String toString() {
         return ("Original expression: " + this.expression + "\n" +
                 "Tokenized expression: " + this.tokens.toString() + "\n" +
                 "Reverse Polish Notation: " +this.reverse_polish.toString() + "\n" +
-                "Final result: " + String.format("%.2f", this.result));
+                "Final result: " + String.format("%.4f", this.result)) + "\n" + "\n";
     }
+
+    
   
 
 }
