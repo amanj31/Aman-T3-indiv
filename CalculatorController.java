@@ -1,3 +1,6 @@
+import java.util.Scanner;
+
+
 public class CalculatorController extends Skeleton {
 
     public CalculatorController(String text) {
@@ -6,12 +9,16 @@ public class CalculatorController extends Skeleton {
 
     @Override
     public void run() {
-        Calculator test1 = new Calculator("2 + 3 * 5");
-        System.out.println(test1.toString());
-        Calculator test2 = new Calculator("500 / 60 + 30 - 24 * 2");
-        System.out.println(test2.toString());
-        Calculator test3 = new Calculator("(25 - 4) % 6 + 7 * (9 - 3)");
-        System.out.println(test3.toString());
+        System.out.println("Enter an expression to calculate: ");
+        Scanner scanner = new Scanner(System.in);
+        String thisThing = scanner.nextLine();
+        try {
+            Calculator test1 = new Calculator(thisThing);
+            System.out.println(test1.toString());
+        } catch (Exception e) {
+            System.out.println("Invalid input, try again");
+            run();
+        }
     }
     
     
