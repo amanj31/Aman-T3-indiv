@@ -1,12 +1,12 @@
 # Week 2:
 
-**Overall Grade:**
+**Overall Grade: 5.75/5**
 
 **Graded by: Alvin Zheng**
 
-**Individual Grade:**
+**Individual Grade: 3/2**
 
-**Team Grade:**
+**Team Grade: 2.75/3**
 
 [Review Ticket](https://github.com/amanj31/Aman-T3-indiv/issues/3)
 
