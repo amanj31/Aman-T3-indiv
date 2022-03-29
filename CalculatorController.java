@@ -14,7 +14,7 @@ public class CalculatorController extends Skeleton {
         Scanner scanner = new Scanner(System.in);
         String thisThing = scanner.nextLine();
         try {
-            Calculator test1 = new Calculator(thisThing.replaceAll("ANS", prevAns));
+            Calculator test1 = new Calculator(((thisThing.replaceAll("ANS", prevAns)).replaceAll("e", "2.718281828459")).replaceAll("pi", "3.14159265359"));
             // test1.setANS(prevAns);
             System.out.println(test1.toString());
             prevAns = test1.getAns();
