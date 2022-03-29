@@ -21,7 +21,7 @@ Runtime: (found on Repl) [Here](https://replit.com/@AmanJain25/Aman-T3-indiv#Mai
 * Important to use methods to go interchangably between strings (the tangible input and output) and doubles (used for calculations)
 
 Code links:
-[Creating a Queue](https://github.com/amanj31/Aman-T3-indiv/blob/main/Calculator.java):
+[Calculator Code with RPN](https://github.com/amanj31/Aman-T3-indiv/blob/main/Calculator.java):
 ```
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -286,7 +286,7 @@ public class Calculator {
     
 ```
 
-[Queue to Stack](https://github.com/amanj31/Aman-T3-indiv/blob/main/CalculatorController.java):
+[Controller (created object and stores provious answer)](https://github.com/amanj31/Aman-T3-indiv/blob/main/CalculatorController.java):
 ```
 import java.util.Scanner;
 
