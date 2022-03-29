@@ -14,14 +14,11 @@ Runtime: (found on Repl) [Here](https://replit.com/@AmanJain25/Aman-T3-indiv#Mai
 
 ### Key Learnings: 
 
-* A Linked List is a data structure in which pieces of data are linked by nodes and ordered from head to tail. It is a linear data structure. New objects are inserted at the tail.
-* An empty linked list only has null, and the last element of any linked list points to null.
-* A Queue is FIFO (first in first out).
-* Queues are data structures like a normal line people wait in, can be created with a linked list.
-* Queue and Dequeue are add and remove (add to the tail, remove from the front)
-* Stacks are like a stack of plates (LIFO): last in first out.
-* These can also be built with a linked list, but the tail has to be treated as the for removal. 
-* Push and pop are add and remove (add and remove from the head)
+* Stacks are useful for carrying out calculation 
+* Use a hashmap to organize order of operations
+* Reverse polish notation is how computers carry out calculation
+* The stack organizes the order in which calculations are meant to be carried out
+* Important to use methods to go interchangably between strings (the tangible input and output) and doubles (used for calculations)
 
 Code links:
 [Creating a Queue](https://github.com/amanj31/Aman-T3-indiv/blob/main/Calculator.java):
