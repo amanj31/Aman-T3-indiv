@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 
 public class CalculatorController extends Skeleton {
+    String prevAns = "";
 
     public CalculatorController(String text) {
         super(text);
@@ -13,8 +14,10 @@ public class CalculatorController extends Skeleton {
         Scanner scanner = new Scanner(System.in);
         String thisThing = scanner.nextLine();
         try {
-            Calculator test1 = new Calculator(thisThing);
+            Calculator test1 = new Calculator(thisThing.replaceAll("ANS", prevAns));
+            // test1.setANS(prevAns);
             System.out.println(test1.toString());
+            prevAns = test1.getAns();
         } catch (Exception e) {
             System.out.println("Invalid input, try again");
             run();

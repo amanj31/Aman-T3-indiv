@@ -7,6 +7,7 @@ public class Calculator {
     private String expression;
     private ArrayList<String> tokens;
     private Double result;
+    //private Double ANS; //previous answer
 
     public Calculator(String expression) {
 
@@ -174,8 +175,23 @@ public class Calculator {
         if (multiCharTerm.length() > 0) {
             tokens.add(this.expression.substring(start));
         }
+        // for (int w = 0; w < tokens.size(); w++) {
+        //     if (tokens.get(w).equals("ANS")) {
+        //         tokens.set(w, String.valueOf(ANS));
+        //     }
+        // }
     } //termTokenizer
 
+    // public void setANS(Double k) {
+    //     ANS = k;
+    // }
+
+    // public Double getAns() {
+    //     return(ANS);
+    // }
+    public String getAns() {
+        return(String.format("%.8f", this.result));
+    }
 
     private void rpnToResult(){
         
@@ -231,6 +247,7 @@ public class Calculator {
         }
   
     public String toString() {
+        //ANS = Double.parseDouble(String.format("%.4f", this.result));
         return ("Original expression: " + this.expression + "\n" +
                 "Tokenized expression: " + this.tokens.toString() + "\n" +
                 "Reverse Polish Notation: " +this.reverse_polish.toString() + "\n" +
