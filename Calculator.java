@@ -12,7 +12,6 @@ public class Calculator {
     public Calculator(String expression) {
 
         System.out.println("Welcome to calculator");
-        System.out.println("Use 'ANS' to access the previous answer. Use 'pi' and 'e' to access these mathematical constants. Use 'SQRT()' to take a square root.");
         // original input
         this.expression = expression;
         //System.out.println("Original expression: " + this.expression);
