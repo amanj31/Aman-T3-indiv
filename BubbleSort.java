@@ -2,33 +2,36 @@ import java.time.Duration;
 import java.time.Instant;
 import java.util.ArrayList;
 
-public class SelectionSort {
+public class BubbleSort {
     ArrayList<Integer> data = new ArrayList<>();
     Duration timeElapsed;
 
-    public SelectionSort(int dataSize) {
+    public BubbleSort(int dataSize) {
         for (int i = 0; i < dataSize; i++) {
             data.add((int) (Math.random() * dataSize * 10));
         }
     }
 
-    public SelectionSort(ArrayList<Integer> k) {
+    public BubbleSort(ArrayList<Integer> k) {
         data = k;
     }
 
     public void sort() {
         Instant start = Instant.now();
         int size = data.size();
-        for (int j = 0; j < size - 1; j++) {
-            int smallestIndex = j;
-            for (int k = j + 1; k < size; k++) {
-                if (data.get(k) < data.get(smallestIndex)) {
-                    smallestIndex = k;
+        for (int i = 0; i < size - 1; i++) {
+            boolean isSwap = false;
+            for (int j = 0; j < size - 1 - i; j++) {
+                if (data.get(j) > data.get(j + 1)) {
+                    int keeper = data.get(j);
+                    data.set(j, data.get(j + 1));
+                    data.set(j + 1, keeper);
+                    isSwap = true;
                 }
             }
-            int qq = data.get(smallestIndex);
-            data.set(smallestIndex, data.get(j));
-            data.set(j, qq);
+            if (isSwap == false) {
+                break;
+            }
         }
         Instant end = Instant.now();
         timeElapsed = Duration.between(start, end);
@@ -42,6 +45,5 @@ public class SelectionSort {
         return timeElapsed.getNano();
     }
 
+
 }
-
-

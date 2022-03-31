@@ -2,33 +2,31 @@ import java.time.Duration;
 import java.time.Instant;
 import java.util.ArrayList;
 
-public class SelectionSort {
+public class InsertionSort {
     ArrayList<Integer> data = new ArrayList<>();
     Duration timeElapsed;
 
-    public SelectionSort(int dataSize) {
+    public InsertionSort(int dataSize) {
         for (int i = 0; i < dataSize; i++) {
             data.add((int) (Math.random() * dataSize * 10));
         }
     }
 
-    public SelectionSort(ArrayList<Integer> k) {
+    public InsertionSort(ArrayList<Integer> k) {
         data = k;
     }
 
     public void sort() {
         Instant start = Instant.now();
         int size = data.size();
-        for (int j = 0; j < size - 1; j++) {
-            int smallestIndex = j;
-            for (int k = j + 1; k < size; k++) {
-                if (data.get(k) < data.get(smallestIndex)) {
-                    smallestIndex = k;
-                }
+        for (int j = 1; j < size; j++) {
+            int currentDatum = data.get(j);
+            int topIndex = j - 1;
+            while (topIndex > -1 && data.get(topIndex) > currentDatum) {
+                data.set(topIndex + 1, data.get(topIndex));
+                topIndex -= 1;
             }
-            int qq = data.get(smallestIndex);
-            data.set(smallestIndex, data.get(j));
-            data.set(j, qq);
+            data.set(topIndex + 1, currentDatum);
         }
         Instant end = Instant.now();
         timeElapsed = Duration.between(start, end);
@@ -42,6 +40,5 @@ public class SelectionSort {
         return timeElapsed.getNano();
     }
 
+
 }
-
-

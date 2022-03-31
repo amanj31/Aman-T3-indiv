@@ -29,7 +29,7 @@ public class Main {   //Everything in Java is inside a class, Squigs, Squigalies
         choices.put(3, new IntByReference("Choice 3 (Swapper)"));
         choices.put(4, new Matrix("Choice 4 (Matrix)"));
         choices.put(5, new CreatingQueue("Choice 5: Create a Queue"));
-        choices.put(6, new MergeSort("Choice 6: Sort two Linked Lists"));
+        choices.put(6, new MergeSortExample("Choice 6: Sort two Linked Lists"));
         choices.put(7, new QueueToStack("Choice 7: Queue to Stack"));
         choices.put(8, new CalculatorController("Choice 8: Calculator"));
         
