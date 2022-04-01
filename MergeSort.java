@@ -1,91 +1,135 @@
-import java.util.LinkedList;
+import java.time.Duration;
+import java.time.Instant;
+import java.util.ArrayList;
 
-public class MergeSort extends Skeleton {//extends Skeleton because it must use abstraction to appear in the menu properly
+public class MergeSort {
+    ArrayList<Integer> data = new ArrayList<>();
+    Duration timeElapsed;
+    // static int recurseDepth = 0;
 
-
-
-    // Linked lists a and b are the original linked lists, linked list c is initially empty and will eventually contain the elements of both a and b, sorted
-    LinkedList<Integer> a = new LinkedList<>();
-    LinkedList<Integer> b = new LinkedList<>();
-    LinkedList<Integer> c = new LinkedList<>();
-    LinkedList<String> x = new LinkedList<>();
-    LinkedList<String> y = new LinkedList<>();
-    LinkedList<String> z = new LinkedList<>();
-
-
-    //initializing and b
-    public MergeSort(String t) {
-        super(t);
-        a.add(1);
-        a.add(4);
-        a.add(5);
-        a.add(8);
-        b.add(2);
-        b.add(3);
-        b.add(6);
-        b.add(7);
-        x.add("Apple");
-        x.add("Banana");
-        x.add("Grape");
-        x.add("Mango");
-        x.add("Orange");
-        x.add("Raspberry");
-        x.add("Watermelon");
-        y.add("Broccoli");
-        y.add("Carrot");
-        y.add("Cucumber");
-        y.add("Lettuce");
-        y.add("Potato");
-        y.add("Tomato");
+    public MergeSort(int dataSize) {
+        for (int i = 0; i < dataSize; i++) {
+            data.add((int) (Math.random() * dataSize * 10));
+        }
     }
 
-    public void run() {
-        System.out.println("The lists a and b will be sorted in numerical order.");
-        System.out.println("a: " + a);
-        System.out.println("b: " + b);
-        while (a.size() > 0 || b.size() > 0) { //this means there are still elements left to be sorted
-            if (a.size() == 0) {//if a is empty then b has the only remaining elements
-                c.add(b.getFirst());
-                b.removeFirst();
-            } else if (b.size() == 0) {//similarly if b is empty then a has the only remaining elements
-                c.add(a.getFirst());
-                a.removeFirst();
+    public MergeSort(ArrayList<Integer> k) {
+        data = k;
+    }
+
+    // public MergeSort sort() {
+    //     //if (recurseDepth > 20) {return new MergeSort(0);}
+    //     Instant start = Instant.now();
+    //     int size = data.size();
+    //     ArrayList<Integer> firstHalf = new ArrayList<>();
+    //     for (int i = 0; i < size / 2; i++) {
+    //         firstHalf.add(data.get(0));
+    //         data.remove(0);
+    //     }
+    //     //System.out.println(firstHalf.size());
+    //     //System.out.println(data.size());
+    //     MergeSort fHalf = new MergeSort(firstHalf);
+    //     MergeSort sHalf = new MergeSort(data);
+    //     if (firstHalf.size() > 2){
+    //         recurseDepth += 1;
+    //         fHalf.sort();
+    //     }
+    //     if (data.size() > 2){
+    //         recurseDepth += 1;
+    //         sHalf.sort();
+    //     }
+    //     MergeSort last = merge(fHalf, sHalf);
+    //     Instant end = Instant.now();
+    //     last.setTimeElapsed(Duration.between(start, end));
+    //     System.out.println(firstHalf);
+    //     System.out.println(data);
+    //     System.out.println(last.getData());
+    //     return last;
+    // }
+
+    // public MergeSort merge(MergeSort x, MergeSort y) {
+    //     ArrayList<Integer> output = new ArrayList<>();
+    //     while ((x.getData()).size() > 0 || (y.getData()).size() > 0) {
+    //         if ((x.getData().size()) == 0) {
+    //             output.add((y.getData()).get(0));
+    //             (y.getData()).remove(0);
+    //         } else if ((y.getData()).size() == 0) {
+    //             output.add((x.getData()).get(0));
+    //             (x.getData()).remove(0);
+    //         } else {
+    //             if ((x.getData()).get(0) > ((y.getData()).get(0))) {
+    //                 output.add((y.getData()).get(0));
+    //                 (y.getData()).remove(0);
+    //             } else {
+    //                 output.add((x.getData()).get(0));
+    //                 (x.getData()).remove(0);
+    //             }
+    //         }
+    //     }
+    //     MergeSort z = new MergeSort(output);
+    //     return z;
+    // }
+
+
+    public ArrayList<Integer> merge(ArrayList<Integer> a, ArrayList<Integer> b) {
+        ArrayList<Integer> output = new ArrayList<>();
+        while (a.size() > 0 || b.size() > 0) {
+            if (a.size() == 0) {
+                output.add(b.get(0));
+                b.remove(0);
+            } else if (b.size() == 0) {
+                output.add(a.get(0));
+                a.remove(0);
             } else {
-                if (a.getFirst() > b.getFirst()) {//"peeking" at the head of both a and b, to compare them
-                    c.add(b.getFirst());
-                    b.removeFirst();
+                if (a.get(0) > b.get(0)) {
+                    output.add(b.get(0));
+                    b.remove(0);
                 } else {
-                    c.add(a.getFirst());
-                    a.removeFirst();
+                    output.add(a.get(0));
+                    a.remove(0);
                 }
             }
         }
-        System.out.println("Sorted list: " + c);
-        System.out.println();
-        System.out.println(1);
-
-        System.out.println("The lists x and y will be sorted in alphabetical order.");
-        System.out.println("x: " + x);
-        System.out.println("y: " + y);
-        while (x.size() > 0 || y.size() > 0) { //this means there are still elements left to be sorted
-            if (x.size() == 0) {//if a is empty then b has the only remaining elements
-                z.add(y.getFirst());
-                y.removeFirst();
-            } else if (y.size() == 0) {//similarly if b is empty then a has the only remaining elements
-                z.add(x.getFirst());
-                y.removeFirst();
-            } else {
-                if ((x.getFirst()).compareTo(y.getFirst()) >= 0) {
-                    z.add(y.getFirst());
-                    y.removeFirst();
-                } else {
-                    z.add(x.getFirst());
-                    x.removeFirst();
-                }
-            }
-        }
-        System.out.println(1);
-        System.out.print("Sorted list: ");
+        return output;
     }
-    
+
+    public ArrayList<Integer> divide(ArrayList<Integer> t) {
+        ArrayList<Integer> s = new ArrayList<>();
+        int size = t.size();
+        if (size > 1) {
+            for (int f = 0; f < size / 2; f++) {
+                s.add(t.get(0));
+                t.remove(0);
+            }
+            
+            return merge(divide(s), divide(t)); 
+        } else {
+            return t;
+        }
+    }
+
+    public void sort() {
+        Instant start = Instant.now();
+        data = divide(data);
+        Instant end = Instant.now();
+        timeElapsed = Duration.between(start, end);
+    }
+
+    public ArrayList<Integer> getData() {
+        return data;
+    }
+
+    public void setData(ArrayList<Integer> r) {
+        data = r;
+    }
+
+    public int getTimeElapsed() {
+        return timeElapsed.getNano();
+    }
+
+    public void setTimeElapsed(Duration w) {
+        timeElapsed = w;
+    }
+
+
 }

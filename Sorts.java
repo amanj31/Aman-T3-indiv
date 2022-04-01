@@ -14,7 +14,7 @@ public class Sorts {
         ArrayList<ArrayList<Integer>> cases = new ArrayList<ArrayList<Integer>>();
         for (int b = 0; b < 12; b++) {
             ArrayList<Integer> h = new ArrayList<>();
-            for (int e = 0; e < 10; e++) {
+            for (int e = 0; e < 5000; e++) {
                 h.add((int) (Math.random() * 50000));
             }
             cases.add(h);
@@ -27,7 +27,7 @@ public class Sorts {
             selectionSorts[a].sort();
             insertionSorts[a].sort();
             bubbleSorts[a].sort();
-            mergeSorts[a] = mergeSorts[a].sort();
+            mergeSorts[a].sort();
             // System.out.print(selectionSorts[a].getData());
             // System.out.println();
             // System.out.println();
@@ -45,10 +45,12 @@ public class Sorts {
         insertionSortTimes.sort(null);
         bubbleSortTimes.sort(null);
         mergeSortTimes.sort(null);
+        System.out.println();
         System.out.println("selection sort times: " + selectionSortTimes.toString());
         System.out.println("inertion sort times: " + insertionSortTimes.toString());
         System.out.println("bubble sort times: " + bubbleSortTimes.toString());
         System.out.println("merge sort times: " + mergeSortTimes.toString());
+        System.out.println();
         int avgSelectionSortTime = 0;
         int avgInsertionSortTime = 0;
         int avgBubbleSortTime = 0;
