@@ -5,21 +5,21 @@ import java.util.ArrayList;
 public class SelectionSort {
     ArrayList<Integer> data;
     Duration timeElapsed;
-    // int swaps;
-    // int comparisons;
+    int swaps;
+    int comparisons;
 
     public SelectionSort(int dataSize) {
         for (int i = 0; i < dataSize; i++) {
             data.add((int) (Math.random() * dataSize * 10));
         }
-        // swaps = 0;
-        // comparisons = 0;
+        swaps = 4999;
+        comparisons = 0;
     }
 
     public SelectionSort(ArrayList<Integer> k) {
         data = k;
-        // swaps = 0;
-        // comparisons = 0;
+        swaps = 4999;
+        comparisons = 0;
     }
 
     public void sort() {
@@ -28,7 +28,7 @@ public class SelectionSort {
         for (int j = 0; j < size - 1; j++) {
             int smallestIndex = j;
             for (int k = j + 1; k < size; k++) {
-                //comparisons += 1;
+                comparisons += 1;
                 if (data.get(k) < data.get(smallestIndex)) {
                     smallestIndex = k;
                 }
@@ -36,8 +36,6 @@ public class SelectionSort {
             int qq = data.get(smallestIndex);
             data.set(smallestIndex, data.get(j));
             data.set(j, qq);
-
-            //swaps += 1;
         }
         Instant end = Instant.now();
         timeElapsed = Duration.between(start, end);
@@ -51,13 +49,13 @@ public class SelectionSort {
         return timeElapsed.getNano();
     }
 
-    // public int getSwaps() {
-    //     return swaps;
-    // }
+    public int getSwaps() {
+        return swaps;
+    }
 
-    // public int getComparisons() {
-    //     return comparisons;
-    // }
+    public int getComparisons() {
+        return comparisons;
+    }
 
 }
 
