@@ -1,7 +1,13 @@
 import java.util.*;
 
-public class Sorts {
-    public static void main(String[] args) {
+public class Sorts extends Skeleton {
+
+    public Sorts(String text) {
+        super(text);
+    }
+
+    @Override
+    public void run() {
         SelectionSort[] selectionSorts =  new SelectionSort[12];
         InsertionSort[] insertionSorts = new InsertionSort[12];
         BubbleSort[] bubbleSorts = new BubbleSort[12];
@@ -53,12 +59,6 @@ public class Sorts {
             // System.out.println("i " + insertionSorts[a].getData());
             // System.out.println("b " + bubbleSorts[a].getData());
             // System.out.println("m " + mergeSorts[a].getData());
-            // System.out.println();
-            // System.out.println();
-            // System.out.println();
-            // System.out.println();
-            // System.out.println();
-            //System.out.println(mergeSorts[a].getData());
             selectionSortTimes.add(selectionSorts[a].getTimeElapsed());
             insertionSortTimes.add(insertionSorts[a].getTimeElapsed());
             bubbleSortTimes.add(bubbleSorts[a].getTimeElapsed());

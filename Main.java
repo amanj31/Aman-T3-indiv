@@ -32,6 +32,7 @@ public class Main {   //Everything in Java is inside a class, Squigs, Squigalies
         choices.put(6, new MergeSortExample("Choice 6: Sort two Linked Lists"));
         choices.put(7, new QueueToStack("Choice 7: Queue to Stack"));
         choices.put(8, new CalculatorController("Choice 8: Calculator"));
+        choices.put(9, new Sorts("Choice 9: Sorts"));
         
          // 'coder' defined method/function call to a different code block
 
