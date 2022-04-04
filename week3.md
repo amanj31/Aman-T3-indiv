@@ -44,7 +44,7 @@ Average Bubble Sort Comparisons and Swaps:         12495282 and 6267412
 ### Ranking
 
 * Overall, Merge Sort is by far the best algorithm, except for quite small sets of data. O(n log(n)) is much faster than O(n^2), so the other three algorithms are nowhere near as fast when n grows large. This can also be seen in the times for 5000 elements.
-* Insertion and Selection are rather evenly matched. Both perform similar numbers of comparisons and swaps, and they have similar speeds. This can also be seen in the times for 5000 elements.
+* Insertion and Selection are rather evenly matched. Both perform similar numbers of comparisons and swaps, and they have similar speeds. This can also be seen in the times for 5000 elements. However, I find selection sort to be a bit better, especially as the amount of data grows. (This might be because it only swaps 2 elements each iteration, but insertion has to move a lot more than 2 elements in each iteration).
 * Bubble sort is the slowest, even though it is also O(n^2). This is because the bubble sort algorithm doesn't optimize the number of swaps it makes (unlike Selection and Insertion), so it can end up swapping elements a lot more than O(n) times. This makes it the slowest by a good amount.
 * In terms of storage, the downside of Merge Sort is that it will take up more memory to store the lists formed while dividing and re-merging. On the other hand, the only extra memory needed for the other three sorts is one or two extra variables used in swapping elements.
 
