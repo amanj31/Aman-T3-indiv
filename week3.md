@@ -12,17 +12,26 @@
 
 Runtime: (found on Repl) [Here](https://replit.com/@AmanJain25/Aman-T3-indiv#Main.java)
 
+## Description of the Sort Algorithms
+
+* Selection Sort: selection sort works by finding the smallest element and placing it at the front, and then finding the second-smallest element and placing it in the second position, and so on. When the algorithm is looking for the k-th smallest element (meaning the first k-1 elements are sorted) and it finds it in spot m, the kth and mth elements are swapped.
+* Insertion Sort: insertion sort works by sorting the first 2 elements, then the first 3, then the first 4, and so on. Basically, after the first k elements have been sorted, the algorithm looks at the (k + 1)th element and decides where it should go in the sorted list of the first k elements. When this happens and element (k + 1) is moved to position j, all elements after position j are shifted up by one position.
+* Bubble Sort: Bubble sort works by going through the whole array multiple (at most the size of the array) times, and each time it swaps two adjacent elements if they are in the wrong order. After the first round the last element must be in the right place, and after the second round the last two must be in the right place, and so on. The algorithm can end early if there is an entire round with no swaps, which means the array is already sorted.
+* Merge Sort: Merge sort is a recursively defined algorithm. In it, an array is divided in half, and this algorithm is used to sort both halved. Then, a merge method is used to combine both sorted arrays into a final array. This merging is like peeking (only requires the first element of both sub-arrays). 
+
 
 ## Analysis of Sorting Algorithms
 
 One test case of 12 lists of 5000 integers gave these statistics about the sorting algorithms:
-Average Selection Sort Time, in nanoseconds (without outliers): 52396600
-Average Insertion Sort Time, in nanoseconds (without outliers): 90672300
-Average Bubble Sort Time, in nanoseconds (without outliers):    264036300
-Average Merge Sort Time, in nanoseconds (without outliers):     12246100
 
-Average Selection Sort Comparisons and Swaps:      12497500 and 4999
-Average Insertion Sort Comparisons and Insertions: 6267412 and 4999
+Average Selection Sort Time, in nanoseconds (without outliers): 52396600   
+Average Insertion Sort Time, in nanoseconds (without outliers): 90672300      
+Average Bubble Sort Time, in nanoseconds (without outliers):    264036300     
+Average Merge Sort Time, in nanoseconds (without outliers):     12246100     
+
+
+Average Selection Sort Comparisons and Swaps:      12497500 and 4999      
+Average Insertion Sort Comparisons and Insertions: 6267412 and 4999      
 Average Bubble Sort Comparisons and Swaps:         12495282 and 6267412
 
 ### Time complexities:
