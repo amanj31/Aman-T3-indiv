@@ -5,71 +5,22 @@ import java.util.ArrayList;
 public class MergeSort {
     ArrayList<Integer> data = new ArrayList<>();
     Duration timeElapsed;
-    // static int recurseDepth = 0;
+    int swaps;
+    int comparisons;
 
     public MergeSort(int dataSize) {
         for (int i = 0; i < dataSize; i++) {
             data.add((int) (Math.random() * dataSize * 10));
         }
+        swaps = 0;
+        comparisons = 0;
     }
 
     public MergeSort(ArrayList<Integer> k) {
         data = k;
+        swaps = 0;
+        comparisons = 0;
     }
-
-    // public MergeSort sort() {
-    //     //if (recurseDepth > 20) {return new MergeSort(0);}
-    //     Instant start = Instant.now();
-    //     int size = data.size();
-    //     ArrayList<Integer> firstHalf = new ArrayList<>();
-    //     for (int i = 0; i < size / 2; i++) {
-    //         firstHalf.add(data.get(0));
-    //         data.remove(0);
-    //     }
-    //     //System.out.println(firstHalf.size());
-    //     //System.out.println(data.size());
-    //     MergeSort fHalf = new MergeSort(firstHalf);
-    //     MergeSort sHalf = new MergeSort(data);
-    //     if (firstHalf.size() > 2){
-    //         recurseDepth += 1;
-    //         fHalf.sort();
-    //     }
-    //     if (data.size() > 2){
-    //         recurseDepth += 1;
-    //         sHalf.sort();
-    //     }
-    //     MergeSort last = merge(fHalf, sHalf);
-    //     Instant end = Instant.now();
-    //     last.setTimeElapsed(Duration.between(start, end));
-    //     System.out.println(firstHalf);
-    //     System.out.println(data);
-    //     System.out.println(last.getData());
-    //     return last;
-    // }
-
-    // public MergeSort merge(MergeSort x, MergeSort y) {
-    //     ArrayList<Integer> output = new ArrayList<>();
-    //     while ((x.getData()).size() > 0 || (y.getData()).size() > 0) {
-    //         if ((x.getData().size()) == 0) {
-    //             output.add((y.getData()).get(0));
-    //             (y.getData()).remove(0);
-    //         } else if ((y.getData()).size() == 0) {
-    //             output.add((x.getData()).get(0));
-    //             (x.getData()).remove(0);
-    //         } else {
-    //             if ((x.getData()).get(0) > ((y.getData()).get(0))) {
-    //                 output.add((y.getData()).get(0));
-    //                 (y.getData()).remove(0);
-    //             } else {
-    //                 output.add((x.getData()).get(0));
-    //                 (x.getData()).remove(0);
-    //             }
-    //         }
-    //     }
-    //     MergeSort z = new MergeSort(output);
-    //     return z;
-    // }
-
 
     public ArrayList<Integer> merge(ArrayList<Integer> a, ArrayList<Integer> b) {
         ArrayList<Integer> output = new ArrayList<>();
@@ -108,7 +59,7 @@ public class MergeSort {
         }
     }
 
-    public void sort() {
+    public void mort() {
         Instant start = Instant.now();
         data = divide(data);
         Instant end = Instant.now();
