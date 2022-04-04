@@ -30,6 +30,7 @@ public class SelectionSort {
             for (int k = j + 1; k < size; k++) {
                 comparisons += 1;
                 if (data.get(k) < data.get(smallestIndex)) {
+                    //swaps the smallest item in the unsorted part of the list with the item in its place
                     smallestIndex = k;
                 }
             }

@@ -29,6 +29,7 @@ public class InsertionSort {
             int currentDatum = data.get(j);
             int topIndex = j - 1;
             while (topIndex > -1 && data.get(topIndex) > currentDatum) {
+                //goes through the first j and places the j + 1 element in the right place, shifting everything in front of it up one spot
                 data.set(topIndex + 1, data.get(topIndex));
                 topIndex -= 1;
                 comparisons += 1;

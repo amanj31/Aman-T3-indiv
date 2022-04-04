@@ -5,26 +5,28 @@ import java.util.ArrayList;
 public class MergeSort {
     ArrayList<Integer> data = new ArrayList<>();
     Duration timeElapsed;
-    int swaps;
-    int comparisons;
+    static int divisions;
+    static int comparisons;
 
     public MergeSort(int dataSize) {
         for (int i = 0; i < dataSize; i++) {
             data.add((int) (Math.random() * dataSize * 10));
         }
-        swaps = 0;
+        divisions = 0;
         comparisons = 0;
     }
 
     public MergeSort(ArrayList<Integer> k) {
         data = k;
-        swaps = 0;
+        divisions = 0;
         comparisons = 0;
     }
 
+    //method to merge two sorted arraylists (only needs to peek)
     public ArrayList<Integer> merge(ArrayList<Integer> a, ArrayList<Integer> b) {
         ArrayList<Integer> output = new ArrayList<>();
         while (a.size() > 0 || b.size() > 0) {
+            comparisons += 1;
             if (a.size() == 0) {
                 output.add(b.get(0));
                 b.remove(0);
@@ -44,7 +46,9 @@ public class MergeSort {
         return output;
     }
 
+    //recursive method to merge sort on both halves
     public ArrayList<Integer> divide(ArrayList<Integer> t) {
+        divisions += 1;
         ArrayList<Integer> s = new ArrayList<>();
         int size = t.size();
         if (size > 1) {
@@ -59,6 +63,7 @@ public class MergeSort {
         }
     }
 
+    //combines divide and merge
     public void mort() {
         Instant start = Instant.now();
         data = divide(data);
@@ -81,6 +86,15 @@ public class MergeSort {
     public void setTimeElapsed(Duration w) {
         timeElapsed = w;
     }
+
+    public int getComparisons() {
+        return comparisons;
+    }
+
+    public int getDivisions() {
+        return divisions;
+    }
+    
 
 
 }

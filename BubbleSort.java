@@ -26,10 +26,12 @@ public class BubbleSort {
         Instant start = Instant.now();
         int size = data.size();
         for (int i = 0; i < size - 1; i++) {
+            //iterates through the list a sufficient number of times
             boolean isSwap = false;
             for (int j = 0; j < size - 1 - i; j++) {
                 comparisons += 1;
                 if (data.get(j) > data.get(j + 1)) {
+                    //swaps adjacent if they are in the wrong order
                     int keeper = data.get(j);
                     data.set(j, data.get(j + 1));
                     data.set(j + 1, keeper);
