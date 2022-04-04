@@ -1,12 +1,8 @@
 # Week 3:
 
-**Overall Grade:**
+**Overall Grade: 5/5**
 
-**Graded by:**
-
-**Individual Grade:**
-
-**Team Grade:**
+**Graded by: Akshay**
 
 [Review Ticket](https://github.com/amanj31/Aman-T3-indiv/issues/4)
 
