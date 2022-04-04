@@ -46,8 +46,8 @@ public class SelectionSort {
         return data;
     }
 
-    public int getTimeElapsed() {
-        return timeElapsed.getNano();
+    public long getTimeElapsed() {
+        return timeElapsed.toNanos();
     }
 
     public int getSwaps() {

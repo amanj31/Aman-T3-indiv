@@ -14,10 +14,10 @@ public class Sorts extends Skeleton {
         InsertionSort[] insertionSorts = new InsertionSort[12];
         BubbleSort[] bubbleSorts = new BubbleSort[12];
         MergeSort[] mergeSorts = new MergeSort[12];
-        ArrayList<Integer> selectionSortTimes = new ArrayList<>();
-        ArrayList<Integer> insertionSortTimes = new ArrayList<>();
+        ArrayList<Long> selectionSortTimes = new ArrayList<>();
+        ArrayList<Long> insertionSortTimes = new ArrayList<>();
         ArrayList<Long> bubbleSortTimes = new ArrayList<>();
-        ArrayList<Integer> mergeSortTimes = new ArrayList<>();
+        ArrayList<Long> mergeSortTimes = new ArrayList<>();
         ArrayList<Integer> selectionSortComparisons = new ArrayList<>();
         ArrayList<Integer> insertionSortComparisons = new ArrayList<>();
         ArrayList<Integer> bubbleSortComparisons = new ArrayList<>();
