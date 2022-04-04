@@ -32,7 +32,8 @@ Average Merge Sort Time, in nanoseconds (without outliers):     12246100
 
 Average Selection Sort Comparisons and Swaps:      12497500 and 4999      
 Average Insertion Sort Comparisons and Insertions: 6267412 and 4999      
-Average Bubble Sort Comparisons and Swaps:         12495282 and 6267412
+Average Bubble Sort Comparisons and Swaps:         12495282 and 6267412      
+Average Merge Sort Comparisons and Divisions:      61808 and 9999
 
 ### Time complexities:
 
