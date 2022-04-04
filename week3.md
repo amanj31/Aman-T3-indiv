@@ -13,6 +13,32 @@
 Runtime: (found on Repl) [Here](https://replit.com/@AmanJain25/Aman-T3-indiv#Main.java)
 
 
+## Analysis of Sorting Algorithms
+
+One test case of 12 lists of 5000 integers gave these statistics about the sorting algorithms:
+Average Selection Sort Time, in nanoseconds (without outliers): 52396600
+Average Insertion Sort Time, in nanoseconds (without outliers): 90672300
+Average Bubble Sort Time, in nanoseconds (without outliers):    264036300
+Average Merge Sort Time, in nanoseconds (without outliers):     12246100
+
+Average Selection Sort Comparisons and Swaps:      12497500 and 4999
+Average Insertion Sort Comparisons and Insertions: 6267412 and 4999
+Average Bubble Sort Comparisons and Swaps:         12495282 and 6267412
+
+### Time complexities:
+
+* Selection Sort: a selection sort algorithm iterates through the last k terms of the array, as k ranges from 1 to n-1 (size of array minus 1). This means the algorithm will always perform 1 + 2 + ... + (n-2) + (n-1) = n(n-1)/2 comparisons. This is an O(n^2) algorithm.
+* Insertion Sort: similar to selection sort, an insertion sort algorithm iterates through the first k terms of the array, as k ranges from 2 to n. This means that in a worst-case scenario, the number of comparisons is again quadratic in n, so this is an O(n^2) algorithm.
+* Bubble Sort: In a worst case scenario, the algorithm makes n-1 rounds of swaps, and these rounds have n-1, n-2, ..., 2, and 1 swaps. This means there are up to (n-1) + (n-2) + ... + 1 = n(n-1)/2 comparisons, so this is also an O(n^2) algorithm.
+* Merge Sort: The algorithm on a data structure of size n is performed by dividing the structure into two structures of size n/2, and then performs an additional algorithm which merges both ordered structures. Overall, the amount of divisions which are performed is log(n), and the merging of the ordered lists is linear in n. Therefore, the combined algorithm in total is O(n log(n)).
+
+### Ranking
+
+* Overall, Merge Sort is by far the best algorithm, except for quite small sets of data. O(n log(n)) is much faster than O(n^2), so the other three algorithms are nowhere near as fast when n grows large. This can also be seen in the times for 5000 elements.
+* Insertion and Selection are rather evenly matched. Both perform similar numbers of comparisons and swaps, and they have similar speeds. This can also be seen in the times for 5000 elements.
+* Bubble sort is the slowest, even though it is also O(n^2). This is because the bubble sort algorithm doesn't optimize the number of swaps it makes (unlike Selection and Insertion), so it can end up swapping elements a lot more than O(n) times. This makes it the slowest by a good amount.
+* In terms of storage, the downside of Merge Sort is that it will take up more memory to store the lists formed while dividing and re-merging. On the other hand, the only extra memory needed for the other three sorts is one or two extra variables used in swapping elements.
+
 
 Code links:
 [Selection Sort](https://github.com/amanj31/Aman-T3-indiv/blob/main/SelectionSort.java):
