@@ -55,7 +55,6 @@ public class Main {   //Everything in Java is inside a class, Squigs, Squigalies
         try {
             Scanner currentScan = new Scanner(System.in);
             int order = currentScan.nextInt();
-            //currentScan.close();
             int qq = 0;
             do {
                 choices.get(order).run();
