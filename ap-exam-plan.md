@@ -18,6 +18,6 @@
 | --- | --- | --- |
 | Monday | Take practice MC, 2016 ([Link](apcsaexam.org/uploads/1/0/7/7/107712547/2016_practice_ap_exam.pdf)) <br>  | Rewatch all Unit 6 CB videos |
 | Tuesday | Take practice MC with class (with Collegeboard) | Rewatch all Unit 7 CB videos |
-| Wednesday | Review Calculator and Data structures (linked lists/stacks/queues) projects to strengthen my understanding of java data structures and methods to modify/use them |
+| Wednesday | Review Calculator and Data structures (linked lists/stacks/queues) projects to strengthen my understanding of java data structures and methods to modify/use them | Rewatch all Unit 8 CB videos |
 | Thursday | Take practice FRQ with class (with Collegeboard) | Rewatch all Unit 9 CB videos |
 | Friday | Work on problems from the 2017 APCSA FRQ ([Link](https://www.apcsaexam.org/frq.html)) | Rewatch all Unit 10 CB videos |
